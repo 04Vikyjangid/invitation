@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WEDDING INVITATION</title>
+ <link rel="icon" href="C:\Users\Asus\Desktop\hello\fonts\favicon.ico">
+  <link rel="stylesheet" href="css/WEDDINGSTYLE.CSS">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body> 
+<div class="invitation">
+<div class="col-md-6">
+	<div class="pic">
+ <h1>Jadon Family Inviting You for the special occasion..!!</h1>
+   <img src="https://www.clipartwiki.com/clipimg/full/447-4472085_home-page-slider-image-indian-wedding-couple-png.png">
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div  class="mid" style="text-align:center;" id="timer">
+	<h1>Time Remains:</h1>
+  <span id="days"></span>days
+  <span id="hours"></span>hours
+  <span id="minutes"></span>minutes
+  <span id="seconds"></span>seconds
+
+
+  <div class="logo">
+    <span class="laura">Ritesh singh Jadon</span>
+<!--     <span class="ampersand">&</span> -->
+    <div class='center ampersand heart animated css'></div>
+
+    <span class="javery">Shivani Bhadoriya</span>
+<!--     <date>8.02.2020</date> -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="banner">
+	<div class="container-fluid">
+		<div class="col-md-6">
+			<div class="post">
+			</div>
+		</div>
+ <div class="col-md-3 col-sm-6 col-6">
+	<div class="first">
+		<h3><strong>Wedding Date:</strong><br><span>09-feb-2020</span></h3>
+		<h3><strong>Wedding Venue:</strong><br><span>Gormi (M.P.)</span></h3>
+</div>
+	</div>
+	<div class="col-md-3 col-sm-6 col-6">
+	<div class="last">
+        <h3><strong>Reception Date:</strong><br><span>12-feb-2020</span></h3>
+		<h3><strong>Reception Venue:</strong><br><span>Sajan Prabha Garden<br>vijay nagar, indore (M.P.)</span></h3>
+	</div> 
+</div>
+</div>
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+<SCRIPT>
+	var timer;
+
+var compareDate = new Date();
+compareDate.setDate(38)
+// compareDate.setDate(2019,06,25); //just for this demo today + 7 days
+
+timer = setInterval(function() {
+  timeBetweenDates(compareDate);
+}, 1000);
+
+function timeBetweenDates(toDate) {
+  var dateEntered = toDate;
+  console.log();
+  
+  var now = new Date();
+  var difference = dateEntered.getTime() - now.getTime();
+
+  if (difference <= 0) {
+
+    // Timer done
+    clearInterval(timer);
+  
+  } else {
+    
+    var seconds = Math.floor(difference / 1000);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var days = Math.floor(hours / 24);
+
+    hours %= 24;
+    minutes %= 60;
+    seconds %= 60;
+
+    $("#days").text(days);
+    $("#hours").text(hours);
+    $("#minutes").text(minutes);
+    $("#seconds").text(seconds);
+  }
+}
+	</SCRIPT>
+
+</body>
+</html>
